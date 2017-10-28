@@ -5,11 +5,81 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 header{
     height: 100vh;
     background-color: #EBB2C1;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+main {
+    height: 100vh;
+    background-color: grey;
 }
 
+header img{
+    position: absolute;
+    bottom: 0;
+    right: -50%;
+    height: 70%;
+}
+
+header nav{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+/*    3x rozmair obiektu nadrzędnego*/
+    font-size: 2rem;
+}
+
+header hgroup{
+    position: absolute;
+    top: 15%;
+    lepft: 10%;
+    text-transform: uppercase;
+    z-index: 2;
+}
+header h1 {
+    font-size: 2rem;
+}
+header h3 {
+    font-size: 1rem;
+}
+
+#arrow {
+    width: 48px;
+    height: 48px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (orientation: portrait){
+    h1 span::after {
+        content: '\A';
+        white-space: pre;
+    }    
+}
+
+@media (orientation: landscape){
+    header img{
+        left : 0;
+    }
+}
+
+@media (max-width: 320px){
+    header h3{
+        font-size: 2.4rem;
+    }
+    hgroup {
+        transform: rotate(-15deg);
+    }
+}
